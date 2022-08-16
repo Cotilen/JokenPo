@@ -1,22 +1,27 @@
 package br.senai.sp.jandira;
 
- import java.util.Scanner;
+import java.util.Scanner;
 public class JoKenPo {
 	
 
 	public static void main(String[] args) {
-		int jogador,computador;
 		
+		int jogador,computador;
 		Scanner teclado = new Scanner(System.in);
 		
+		System.out.println("--------------------✊✋✌️--------------------\n");
 		System.out.println("******JoKenpô******\n");
 		System.out.println("1. Pedra");
 		System.out.println("2. Papel");
 		System.out.println("3. Tesoura");
-		System.out.println("\nEscolha seu movimento:");
+		System.out.println("-------------------------");
+		System.out.println("Escolha seu movimento:");
 		
 		//Jogador
+		
 		jogador = teclado.nextInt();
+		
+		
 		switch(jogador) {
 		case 1:
 			System.out.println("Você escolheu Pedra!\n");
@@ -29,6 +34,7 @@ public class JoKenPo {
 			break;
 			default:
 				System.out.println("Opção inválida");
+				System.out.println("Jogo cancelado");
 		}
 		teclado.close();
 		
@@ -48,15 +54,16 @@ public class JoKenPo {
 		}
 		//Vencedor
 		
+		System.out.println("---------------✊✋✌️--------------");
 		if (jogador == computador) {
-			System.out.println("Empate");
+			System.out.println("Parabéns! Empatou");
 		} else {
 			if((jogador == 1 && computador == 3) ||
 			(jogador == 2 && computador == 1) || 
 			(jogador == 3 && computador == 2)) {
-				System.out.println("******Você venceu*******");
+				System.out.println("******Você VENCEU!!!*******");
 			}else {
-				System.out.println("§§§§§ A máquina te derrotou! §§§§§");
+				System.out.println("_____A máquina te derrotou_____");
 			}
 		}
 	}
